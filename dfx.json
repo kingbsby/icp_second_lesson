@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "dfx": "0.8.4",
+  "canisters": {
+    "ipc_second_lesson": {
+      "type": "motoko",
+      "main": "src/ipc_second_lesson/main.mo"
+    },
+    "ipc_second_lesson_assets": {
+      "type": "assets",
+      "source": [
+        "src/ipc_second_lesson_assets/assets"
+      ],
+      "dependencies": [
+        "ipc_second_lesson"
+      ]
+    }
+  },
+  "defaults": {
+    "build": {
+      "packtool": "",
+      "args": ""
+    }
+  },
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  }
+}
